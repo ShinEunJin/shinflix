@@ -1,5 +1,3 @@
 module.exports = {
-    "import/no-anonymous-default-export": ["error", {
-        "allowAnonymousFunction": true
-    }]
+    "parser": "babel-eslint"
 };
