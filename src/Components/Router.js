@@ -6,10 +6,11 @@ import {
     Redirect
 } from "react-router-dom";
 import Home from "../Routes/Home";
-import TV from "../Routes/TV";
+import Recommend from "../Routes/Recommend";
+import New from "../Routes/New";
 import Search from "../Routes/Search";
+import Detail from "../Routes/Detail";
 import Header from "./Header";
-
 
 export default () => (
     <Router>
@@ -17,8 +18,10 @@ export default () => (
             <Header />
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/tv" exact component={TV} />
+                <Route path="/recommend" component={Recommend} />
+                <Route path="/new" component={New} />
                 <Route path="/search" component={Search} />
+                <Route paht="/book/:id" component={Detail} />
                 <Redirect from="*" to="/" />
             </Switch>
         </>

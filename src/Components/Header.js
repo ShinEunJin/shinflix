@@ -18,6 +18,7 @@ const Header = styled.header`
 
 const List = styled.ul`
     display: flex;
+    margin-left: 10px;
 `;
 
 const Item = styled.li`
@@ -39,13 +40,16 @@ export default withRouter((props) => (
     <Header>
         <List>
             <Item current={props.location.pathname === "/"}>
-                <SLink to="/">Movies</SLink>
+                <SLink to="/">베스트셀러</SLink>
             </Item>
-            <Item current={props.location.pathname === "/tv"}>
-                <SLink to="/tv">TV</SLink>
+            <Item current={props.location.pathname === "/recommend"}>
+                <SLink to="/recommend">추천</SLink>
+            </Item>
+            <Item current={props.location.pathname === "/new"}>
+                <SLink to="/new">신간</SLink>
             </Item>
             <Item current={props.location.pathname === "/search"}>
-                <SLink to="/search">Search</SLink>
+                <SLink to="/search">검색</SLink>
             </Item>
         </List>
     </Header>
