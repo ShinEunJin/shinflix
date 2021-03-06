@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
 import Poster from "../../Components/Poster";
+import Loader from "../../Components/Loader"
 
 const Container = styled.div``
 
 const HomePresenter = ({ bestSeller, error, loading }) =>
-    loading ? null : (
+    loading ? <Loader /> : (
         <Container>
             {bestSeller && bestSeller.length > 0 && (
                 <Section>

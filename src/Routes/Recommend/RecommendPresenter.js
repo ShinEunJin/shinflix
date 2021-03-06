@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
 import Poster from "../../Components/Poster";
+import Loader from "../../Components/Loader";
 
 const Container = styled.div``
 
 const RecommendPresenter = ({ recommendBook, loading, error }) =>
-    loading ? null : (
+    loading ? <Loader /> : (
         <Container>
             {recommendBook && recommendBook.length > 0 && (
                 <Section>

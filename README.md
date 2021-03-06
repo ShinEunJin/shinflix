@@ -13,6 +13,4 @@ React book web
 
 styled-components 사용
 
-prop-types 미적용 부분 넣기
-
-Search 부분과 Loader부분 만들기
+Loader css 부분은 인터넷 https://loading.io/css/ 참조

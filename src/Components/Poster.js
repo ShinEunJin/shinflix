@@ -11,6 +11,10 @@ const Container = styled.div`
     box-shadow: 1px 1px 4px rgba(100, 100, 100, 0.7);
     border-radius: 20px;
     position: relative;
+    &:hover{
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        box-shadow: 2px 2px 7px rgba(200, 200, 200, 0.7);
+    }
 `
 
 const SubDescription = styled.div`
@@ -59,3 +63,5 @@ const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, aut
 )
 
 export default Poster
+
+

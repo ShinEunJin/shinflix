@@ -14,16 +14,14 @@ import Header from "./Header";
 
 export default () => (
     <Router>
-        <>
-            <Header />
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/recommend" component={Recommend} />
-                <Route path="/new" component={New} />
-                <Route path="/search" component={Search} />
-                <Route paht="/book/:id" component={Detail} />
-                <Redirect from="*" to="/" />
-            </Switch>
-        </>
+        <Header />
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/recommend" component={Recommend} />
+            <Route path="/new" component={New} />
+            <Route path="/search" component={Search} />
+            <Route paht="/book/:id" component={Detail} />
+            <Redirect from="*" to="/" />
+        </Switch>
     </Router>
 )

@@ -29,14 +29,15 @@ export default class extends React.Component {
         } catch {
             this.setState({ error: `${searchTerm}에 대한 정보를 찾을 수 없습니다.` })
         } finally {
-            this.setState({ loading: false })
+            this.setState({ loading: true })
         }
     }
 
     render() {
-        const { result, loading, error } = this.state;
+        const { result, loading, error, searchTerm } = this.state;
         return (
             <SearchPresenter
+                searchTerm={searchTerm}
                 result={result}
                 loading={loading}
                 error={error}
