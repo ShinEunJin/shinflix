@@ -11,11 +11,19 @@ export default class extends React.Component {
         error: null
     }
 
-    handleSubmit = () => {
+    handleSubmit = event => {
+        event.preventDefault()
         const { searchTerm } = this.state
         if (searchTerm !== "") {
             this.searchByTerm()
         }
+    }
+
+    updateTerm = event => {
+        const {
+            target: { value }
+        } = event
+        this.setState({ searchTerm: value })
     }
 
     searchByTerm = async () => {
@@ -29,18 +37,20 @@ export default class extends React.Component {
         } catch {
             this.setState({ error: `${searchTerm}에 대한 정보를 찾을 수 없습니다.` })
         } finally {
-            this.setState({ loading: true })
+            this.setState({ loading: false })
         }
     }
 
     render() {
-        const { result, loading, error, searchTerm } = this.state;
+        const { result, loading, error, searchTerm, handleSubmit, updateTerm } = this.state;
         return (
             <SearchPresenter
                 searchTerm={searchTerm}
                 result={result}
                 loading={loading}
                 error={error}
+                handleSubmit={this.handleSubmit}
+                updateTerm={this.updateTerm}
             />
         )
     }

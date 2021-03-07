@@ -35,7 +35,7 @@ export const newApi = () => {
 export const searchApi = term => {
     return api.get("search.api", {
         params: {
-            query: encodeURIComponent(term)
+            query: term
         }
     })
 }
