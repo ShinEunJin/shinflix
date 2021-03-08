@@ -9,9 +9,10 @@ const Container = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 300px;
-  grid-gap: 70px;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 550px));
+  grid-auto-rows: minmax(max-content, 300px);
+  grid-row-gap: 100px;
+  justify-content: space-between;
 `
 
 const Section = ({ children }) => (

@@ -25,6 +25,7 @@ const RecommendPresenter = ({ recommendBook, loading, error }) =>
                             author={book.author}
                             publisher={book.publisher}
                             description={book.description}
+                            link={book.link}
                         />
                     ))}
                 </Section>

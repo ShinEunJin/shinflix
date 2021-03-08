@@ -25,6 +25,7 @@ const NewPresenter = ({ newBook, loading, error }) =>
                             author={book.author}
                             publisher={book.publisher}
                             description={book.description}
+                            link={book.link}
                         />
                     ))}
                 </Section>

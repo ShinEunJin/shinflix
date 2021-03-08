@@ -16,6 +16,7 @@ const Image = styled.img`
 const Column = styled.div`
     width: 60%;
     text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
+    position: relative;
 `
 
 const DetailPresenter = ({ result, error, loading }) =>
@@ -34,6 +35,10 @@ const DetailPresenter = ({ result, error, loading }) =>
                 </div>
                 <div style={{ fontSize: 30, marginBottom: 30 }}>{result.price}원</div>
                 <div style={{ fontSize: 30 }}>⭐{result.reviewPoint}</div>
+                <a
+                    href={result.link} target={"_blank"}
+                    style={{ position: 'absolute', bottom: '20px', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px' }}
+                >{`<구매하러 가기>`}</a>
             </Column>
         </Container>
     )

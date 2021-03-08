@@ -25,6 +25,7 @@ const HomePresenter = ({ bestSeller, error, loading }) =>
                             author={book.author}
                             publisher={book.publisher}
                             description={book.description}
+                            link={book.link}
                         />
                     ))}
                 </Section>

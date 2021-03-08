@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
     display: flex;
     align-items: center;
+    height: 100%;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 1px 1px 4px rgba(100, 100, 100, 0.7);
@@ -39,27 +40,27 @@ const Status = styled.div`
     display:flex;
 `
 
-const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, author, publisher, description }) => (
-    <Container>
-        <Link to={{ pathname: `/book/${id}`, state: { title, pubDate, price, saleStatus, image, reviewPoint, author, publisher, description } }}>
+const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, author, publisher, description, link }) => (
+    <Link to={{ pathname: `/book/${id}`, state: { title, pubDate, price, saleStatus, image, reviewPoint, author, publisher, description, link } }}>
+        <Container>
             <Image src={image} />
-        </Link>
-        <SubDescription>
-            <Title>
-                {title}
-            </Title>
-            <br></br>
-            {author}
-            <br></br>
-            <br></br>
-            {reviewPoint}⭐
-            <br></br>
-            <br></br>
-            <Status>
-                {saleStatus}
-            </Status>
-        </SubDescription>
-    </Container>
+            <SubDescription>
+                <Title>
+                    {title}
+                </Title>
+                <br></br>
+                {author}
+                <br></br>
+                <br></br>
+                {reviewPoint}⭐
+                <br></br>
+                <br></br>
+                <Status>
+                    {saleStatus}
+                </Status>
+            </SubDescription>
+        </Container>
+    </Link>
 )
 
 export default Poster

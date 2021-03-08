@@ -14,7 +14,7 @@ export default class extends React.Component {
         try {
             const {
                 data: { item: recommendBook }
-            } = await recommendApi();
+            } = await recommendApi()
             this.setState({ recommendBook })
         } catch {
             this.setState({ error: "추천 정보를 찾을 수 없습니다." })

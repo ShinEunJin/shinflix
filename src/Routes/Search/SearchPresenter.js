@@ -22,7 +22,6 @@ const Input = styled.input`
     all: unset;
     font-size: 25px;
     width: 100%;
-    margin-right: 10px;
     &::placeholder {
         color: white;
         opacity: 0.5;
@@ -38,12 +37,12 @@ const SearchPresenter = ({ result, searchTerm, loading, error, handleSubmit, upd
             />
         </Helmet>
         <Form onSubmit={handleSubmit}>
+            <i style={{ color: 'white', marginRight: '10px' }} className="fas fa-search"></i>
             <Input
                 placeholder="책 제목을 입력해 주십시오."
                 value={searchTerm}
                 onChange={updateTerm}
             />
-            <i style={{ color: 'white' }} className="fas fa-search"></i>
         </Form>
         <>
             {loading ? <Loader /> : (
@@ -63,6 +62,7 @@ const SearchPresenter = ({ result, searchTerm, loading, error, handleSubmit, upd
                                     author={book.author}
                                     publisher={book.publisher}
                                     description={book.description}
+                                    link={book.link}
                                 />
                             ))}
                         </Section>
