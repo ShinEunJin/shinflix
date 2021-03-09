@@ -22,24 +22,28 @@ const Column = styled.div`
 const DetailPresenter = ({ result, error, loading }) =>
     loading ? null : (
         <Container>
-            <Image src={result.image} />
-            <Column>
-                <div style={{ fontWeight: 600, fontSize: 40, marginBottom: 30 }}>{result.title}</div>
-                <div style={{ fontSize: 20, fontWeight: 500, marginBottom: 20 }}>{result.author}</div>
-                <div style={{ fontSize: 15, marginBottom: 50 }}>{result.description}</div>
-                <div style={{ marginBottom: 50 }}>
-                    <span>출간일: {result.pubDate} ({result.saleStatus})</span>
-                    <br></br>
-                    <br></br>
-                    <span>출판사: {result.publisher}</span>
-                </div>
-                <div style={{ fontSize: 30, marginBottom: 30 }}>{result.price}원</div>
-                <div style={{ fontSize: 30, marginBottom: 30 }}>⭐{result.reviewPoint}</div>
-                <a
-                    href={result.link} target={"_blank"}
-                    style={{ border: 'white 1px solid', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px', color: 'white' }}
-                >인터파크 링크</a>
-            </Column>
+            {result && (
+                <>
+                    <Image src={result.image} />
+                    <Column>
+                        <div style={{ fontWeight: 600, fontSize: 40, marginBottom: 30 }}>{result.title}</div>
+                        <div style={{ fontSize: 20, fontWeight: 500, marginBottom: 20 }}>{result.author}</div>
+                        <div style={{ fontSize: 15, marginBottom: 50 }}>{result.description}</div>
+                        <div style={{ marginBottom: 50 }}>
+                            <span>출간일: {result.pubDate} ({result.saleStatus})</span>
+                            <br></br>
+                            <br></br>
+                            <span>출판사: {result.publisher}</span>
+                        </div>
+                        <div style={{ fontSize: 30, marginBottom: 30 }}>{result.price}원</div>
+                        <div style={{ fontSize: 30, marginBottom: 30 }}>⭐{result.reviewPoint}</div>
+                        <a
+                            href={result.link} target={"_blank"}
+                            style={{ border: 'white 1px solid', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px', color: 'white' }}
+                        >인터파크 링크</a>
+                    </Column>
+                </>
+            )}
         </Container>
     )
 

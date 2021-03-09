@@ -66,7 +66,7 @@ const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, aut
 Poster.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    pubDate: PropTypes.number,
+    pubDate: PropTypes.string,
     price: PropTypes.number.isRequired,
     saleStatus: PropTypes.string,
     image: PropTypes.string,
