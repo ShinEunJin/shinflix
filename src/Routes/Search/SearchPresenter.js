@@ -1,10 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "../../Components/Loader";
 import Poster from "../../Components/Poster";
 import Section from "../../Components/Section";
+
+const Hover = keyframes`
+    from {
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+    }
+    to {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+`
 
 const Form = styled.form`
     width: 20%;
@@ -14,7 +23,7 @@ const Form = styled.form`
     align-items: center;
     margin-bottom: 100px;
     &:hover{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        animation: ${Hover} 0.2s ease-in-out forwards;
     }
 `
 
@@ -47,7 +56,7 @@ const SearchPresenter = ({ result, searchTerm, loading, error, handleSubmit, upd
         <>
             {loading ? <Loader /> : (
                 <>
-                    {result ? result.length > 0 ? (
+                    {result && result.length > 0 && (
                         <Section>
                             {result.map(book => (
                                 <Poster
@@ -66,9 +75,10 @@ const SearchPresenter = ({ result, searchTerm, loading, error, handleSubmit, upd
                                 />
                             ))}
                         </Section>
-                    ) : (
+                    )}
+                    {result && result.length === 0 && (
                         <div style={{ color: 'white', marginLeft: '100px', fontSize: '22px', opacity: '0.7', fontWeight: '300' }}>해당하는 도서를 찾을 수 없습니다.</div>
-                    ) : error}
+                    )}
                 </>
             )}
         </>

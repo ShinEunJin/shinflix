@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -37,12 +38,16 @@ const DetailPresenter = ({ result, error, loading }) =>
                 <div style={{ fontSize: 30 }}>⭐{result.reviewPoint}</div>
                 <a
                     href={result.link} target={"_blank"}
-                    style={{ position: 'absolute', bottom: '20px', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px' }}
-                >{`<구매하러 가기>`}</a>
+                    style={{ position: 'absolute', border: 'white 1px solid', bottom: '20px', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px', color: 'white' }}
+                >인터파크 링크</a>
             </Column>
         </Container>
     )
 
-export default DetailPresenter
+DetailPresenter.propTypes = {
+    result: PropTypes.object,
+    error: PropTypes.string,
+    loading: PropTypes.bool.isRequired
+}
 
-//, , , , , reviewPoint, , publisher, 
+export default DetailPresenter

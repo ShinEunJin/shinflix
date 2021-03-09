@@ -63,6 +63,20 @@ const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, aut
     </Link>
 )
 
+Poster.propTypes = {
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    pubDate: PropTypes.number,
+    price: PropTypes.number.isRequired,
+    saleStatus: PropTypes.string,
+    image: PropTypes.string,
+    reviewPoint: PropTypes.number,
+    author: PropTypes.string.isRequired,
+    publisher: PropTypes.string,
+    description: PropTypes.string,
+    link: PropTypes.string
+}
+
 export default Poster
 
 
