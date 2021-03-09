@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "api/",
+    baseURL: "http://book.interpark.com/api/",
     params: {
         key: process.env.REACT_APP_API_KEY,
         output: 'json'
