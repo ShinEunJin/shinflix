@@ -17,7 +17,6 @@ const Image = styled.img`
 const Column = styled.div`
     width: 60%;
     text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
-    position: relative;
 `
 
 const DetailPresenter = ({ result, error, loading }) =>
@@ -35,10 +34,10 @@ const DetailPresenter = ({ result, error, loading }) =>
                     <span>출판사: {result.publisher}</span>
                 </div>
                 <div style={{ fontSize: 30, marginBottom: 30 }}>{result.price}원</div>
-                <div style={{ fontSize: 30 }}>⭐{result.reviewPoint}</div>
+                <div style={{ fontSize: 30, marginBottom: 30 }}>⭐{result.reviewPoint}</div>
                 <a
                     href={result.link} target={"_blank"}
-                    style={{ position: 'absolute', border: 'white 1px solid', bottom: '20px', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px', color: 'white' }}
+                    style={{ border: 'white 1px solid', fontSize: '15px', fontWeight: '500', backgroundColor: 'black', borderRadius: '10px', padding: '4px', color: 'white' }}
                 >인터파크 링크</a>
             </Column>
         </Container>

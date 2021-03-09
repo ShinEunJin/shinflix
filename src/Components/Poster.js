@@ -52,7 +52,7 @@ const Poster = ({ id, title, pubDate, price, saleStatus, image, reviewPoint, aut
                 {author}
                 <br></br>
                 <br></br>
-                {reviewPoint}⭐
+                {reviewPoint}<span role="img" aria-label="rating">⭐</span>
                 <br></br>
                 <br></br>
                 <Status>

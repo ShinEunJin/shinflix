@@ -20,7 +20,7 @@ export default () => (
             <Route path="/recommend" component={Recommend} />
             <Route path="/new" component={New} />
             <Route path="/search" component={Search} />
-            <Route paht="/book/:id" component={Detail} />
+            <Route paht="/book/:id" exact component={Detail} />
             <Redirect from="*" to="/" />
         </Switch>
     </Router>
