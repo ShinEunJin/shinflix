@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/shinflix/static/js/main.4b471da5.chunk.js",
-    "main.js.map": "/shinflix/static/js/main.4b471da5.chunk.js.map",
+    "main.js": "/shinflix/static/js/main.924f9896.chunk.js",
+    "main.js.map": "/shinflix/static/js/main.924f9896.chunk.js.map",
     "runtime-main.js": "/shinflix/static/js/runtime-main.feb93741.js",
     "runtime-main.js.map": "/shinflix/static/js/runtime-main.feb93741.js.map",
     "static/js/2.335aa030.chunk.js": "/shinflix/static/js/2.335aa030.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.feb93741.js",
     "static/js/2.335aa030.chunk.js",
-    "static/js/main.4b471da5.chunk.js"
+    "static/js/main.924f9896.chunk.js"
   ]
 }
