@@ -1,4 +1,5 @@
-import axios from "axios";
+import axios from "axios"
+import cors from "cors"
 
 const api = axios.create({
     baseURL: "https://book.interpark.com/api/",
@@ -7,12 +8,13 @@ const api = axios.create({
         output: 'json'
     },
     headers: {
-        "Access-Control-Allow-Origin": "*"
-    },
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*"
+    }
 })
 
-export const bestSellerApi = () => {
-    return api.get("bestSeller.api", {
+export const bestSellerApi = async () => {
+    return api.get(cors(), "bestSeller.api", {
         params: {
             categoryId: 100
         }
