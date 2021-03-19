@@ -1,11 +1,14 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "api/",
+    baseURL: "https://book.interpark.com/api/",
     params: {
         key: process.env.REACT_APP_API_KEY,
         output: 'json'
-    }
+    },
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    },
 })
 
 export const bestSellerApi = () => {
