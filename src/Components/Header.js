@@ -51,6 +51,9 @@ export default withRouter((props) => (
             <Item current={props.location.pathname === "/search"}>
                 <SLink to="/search">검색</SLink>
             </Item>
+            <Item current={props.location.pathname === "/record"}>
+                <SLink to="/record">녹화</SLink>
+            </Item>
         </List>
     </Header>
 ));
