@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/shinflix/static/js/main.287b0a18.chunk.js",
-    "main.js.map": "/shinflix/static/js/main.287b0a18.chunk.js.map",
+    "main.js": "/shinflix/static/js/main.3f81c7c5.chunk.js",
+    "main.js.map": "/shinflix/static/js/main.3f81c7c5.chunk.js.map",
     "runtime-main.js": "/shinflix/static/js/runtime-main.feb93741.js",
     "runtime-main.js.map": "/shinflix/static/js/runtime-main.feb93741.js.map",
-    "static/js/2.dcd7827c.chunk.js": "/shinflix/static/js/2.dcd7827c.chunk.js",
-    "static/js/2.dcd7827c.chunk.js.map": "/shinflix/static/js/2.dcd7827c.chunk.js.map",
+    "static/js/2.a8f93797.chunk.js": "/shinflix/static/js/2.a8f93797.chunk.js",
+    "static/js/2.a8f93797.chunk.js.map": "/shinflix/static/js/2.a8f93797.chunk.js.map",
     "index.html": "/shinflix/index.html",
-    "static/js/2.dcd7827c.chunk.js.LICENSE.txt": "/shinflix/static/js/2.dcd7827c.chunk.js.LICENSE.txt"
+    "static/js/2.a8f93797.chunk.js.LICENSE.txt": "/shinflix/static/js/2.a8f93797.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.feb93741.js",
-    "static/js/2.dcd7827c.chunk.js",
-    "static/js/main.287b0a18.chunk.js"
+    "static/js/2.a8f93797.chunk.js",
+    "static/js/main.3f81c7c5.chunk.js"
   ]
 }
