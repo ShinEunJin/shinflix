@@ -1,5 +1,4 @@
 import axios from "axios"
-import cors from "cors"
 
 const api = axios.create({
     baseURL: "https://book.interpark.com/api/",
@@ -14,7 +13,7 @@ const api = axios.create({
 })
 
 export const bestSellerApi = async () => {
-    return api.get(cors(), "bestSeller.api", {
+    return api.get("bestSeller.api", {
         params: {
             categoryId: 100
         }
